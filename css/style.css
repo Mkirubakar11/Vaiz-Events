@@ -1,0 +1,492 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&family=Cinzel:wght@500;600&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f6f1f1;
+color:#333;
+}
+
+/* HEADER */
+
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 50px;
+background:#f2dede;
+}
+
+/* ===== PREMIUM LOGO ===== */
+
+.logo{
+font-family:'Cinzel', serif;
+font-size:30px;
+font-weight:600;
+letter-spacing:4px;
+
+/* GOLD GRADIENT */
+background:linear-gradient(
+120deg,
+#d4af37 20%,
+#fff8dc 40%,
+#ffd700 60%,
+#b8962e 80%
+);
+
+background-size:200% auto;
+
+/* TEXT CLIP */
+-webkit-background-clip:text;
+background-clip:text;
+
+color:transparent;
+-webkit-text-fill-color:transparent;
+
+/* SHINE ANIMATION */
+animation:shine 3s linear infinite;
+
+/* GLOW EFFECT */
+text-shadow:0 2px 15px rgba(212,175,55,0.3);
+
+transition:0.3s;
+}
+
+/* ANIMATION KEYFRAMES */
+
+@keyframes shine{
+0%{
+background-position:0% center;
+}
+100%{
+background-position:200% center;
+}
+}
+
+/* HOVER EFFECT */
+
+.logo:hover{
+transform:scale(1.05);
+text-shadow:0 4px 25px rgba(255,215,0,0.6);
+}
+
+.nav a{
+margin:0 15px;
+text-decoration:none;
+color:#333;
+font-weight:500;
+transition:0.3s;
+}
+
+.nav a:hover{
+color:#ff4d6d;
+}
+
+/* HERO */
+
+.hero{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:60px;
+background:#f2dede;
+gap:40px;
+}
+
+.hero-text{
+width:40%;
+text-align:center;
+}
+
+.hero-text h1{
+font-family:'Playfair Display',serif;
+font-size:38px;
+margin-bottom:15px;
+}
+
+.hero-tag{
+font-family:'Playfair Display',serif;
+font-size:14px;
+letter-spacing:1px;
+color:#555;
+margin-bottom:20px;
+}
+.shop-btn{
+  padding: 14px 30px;
+  background: linear-gradient(135deg, #ecaeae9b, #ecaeae9b); /* rich black */
+  color: black; /* soft gold text */
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.shop-btn:hover{
+  color: black;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 6px 20px rgba(212,175,55,0.4);
+}
+
+
+/* TITLES */
+
+h1{
+font-family:'Playfair Display',serif;
+font-size:34px;
+letter-spacing:1px;
+margin-bottom:10px;
+text-align:center;
+}
+
+h3{
+font-family:'Playfair Display',serif;
+text-align:center;
+}
+
+/* GRID */
+
+.products{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+padding:40px;
+}
+
+.product{
+background:white;
+padding:15px;
+border-radius:15px;
+cursor:pointer;
+transition:.3s;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+text-align:center;
+}
+
+.product:hover{
+transform:translateY(-8px);
+}
+
+.product img{
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:10px;
+display:block;
+margin:auto;
+}
+
+.price{
+color:#b76e79;
+font-weight:600;
+text-align:center;
+}
+
+/* CATEGORY */
+
+.categories{
+display:flex;
+gap:40px;
+padding:40px;
+justify-content:center;
+}
+
+.category{
+background:white;
+padding:20px;
+border-radius:10px;
+height: 300px;;
+width:300px;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+text-align:center;
+}
+
+.category img{
+width:100%;
+height: 450px;
+object-fit:cover;
+border-radius:15px;
+display:block;
+margin:auto;
+}
+
+/* PRODUCT DETAIL */
+
+.detail{
+display:flex;
+gap:40px;
+padding:40px;
+}
+
+.detail img{
+width:400px;
+border-radius:10px;
+}
+
+button{
+padding:10px 20px;
+background:black;
+color:white;
+border:none;
+margin-top:10px;
+border-radius:5px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#ff4d6d;
+}
+
+/* SLIDER */
+
+.slider{
+position:relative;
+width:60%;
+height:400px;
+overflow:hidden;
+border-radius:10px;
+}
+
+.slides{
+display:flex;
+width:100%;
+height:100%;
+transition:transform .5s ease;
+}
+
+.slides img{
+width:100%;
+flex-shrink:0;
+object-fit:cover;
+}
+
+/* arrows */
+
+.prev, .next{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:rgba(0,0,0,0.5);
+color:white;
+border:none;
+padding:12px 16px;
+cursor:pointer;
+font-size:18px;
+border-radius:5px;
+}
+
+.prev{left:10px;}
+.next{right:10px;}
+
+/* ================= CUSTOMIZE SECTION (HOME PAGE) ================= */
+
+.customize-section{
+text-align:center;
+padding:50px 20px;
+}
+
+.customize-section h2{
+font-size:28px;
+margin-bottom:10px;
+}
+
+.customize-section p{
+margin-bottom:20px;
+color:gray;
+}
+
+.customize-btn{
+background:linear-gradient(45deg,#ff7a7a,#ff4d6d);
+color:white;
+padding:12px 30px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.customize-btn:hover{
+background:black;
+transform:scale(1.05);
+}
+
+/* ================= CUSTOMIZE PAGE ================= */
+
+.title{
+text-align:center;
+margin-top:30px;
+font-family:'Playfair Display',serif;
+font-size:36px;
+}
+
+/* GRID */
+
+.custom-options{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+padding:50px;
+}
+
+/* CARD */
+
+.option-card{
+background:white;
+border-radius:20px;
+padding:20px;
+text-align:center;
+text-decoration:none;
+color:black;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.option-card:hover{
+transform:translateY(-10px);
+}
+
+/* IMAGE */
+
+.option-card img{
+width:100%;
+height: 350px;
+object-fit:cover;
+border-radius:15px;
+margin-bottom:15px;
+}
+
+/* TEXT */
+
+.option-card h3{
+font-family:'Playfair Display',serif;
+margin-bottom:5px;
+}
+
+.option-card p{
+color:#666;
+font-size:14px;
+}
+
+/* 🔥 FULL WIDTH TEXT */
+
+.custom-full-text{
+width:100%;
+background:linear-gradient(135deg,#f2dede,#ffe4e4);
+text-align:center;
+padding:80px 20px;
+font-family:'Cinzel', serif;
+font-size:32px;
+letter-spacing:2px;
+color:#2c2c2c;
+margin-top:50px;
+}
+
+/* ================= TAILOR ================= */
+
+.tailor-container{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px;
+padding:40px;
+}
+
+.tailor-card{
+background:white;
+padding:20px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 5px 10px rgba(0,0,0,0.1);
+}
+
+.tailor-card img{
+width:100%;
+height:400px;
+object-fit:cover;
+border-radius:10px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+.products{
+grid-template-columns:repeat(2,1fr);
+}
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.slider{
+width:100%;
+}
+
+.detail{
+flex-direction:column;
+align-items:center;
+}
+
+.custom-options{
+grid-template-columns:1fr;
+}
+
+.tailor-container{
+grid-template-columns:1fr;
+}
+
+.tailor-card button{
+margin-top:10px;
+background:#ff4d6d;
+border-radius:20px;
+padding:10px;
+}
+
+.tailor-card input{
+margin-top:10px;
+padding:8px;
+width:100%;
+}
+
+/* ===== GROOM PREMIUM SECTION ===== */
+
+.groom-premium{
+max-width:900px;
+margin:60px auto;
+padding:40px;
+
+background:linear-gradient(135deg,#fff,#f9f3f3);
+border-radius:20px;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+text-align:center;
+}
+
+/* TITLE */
+
+.groom-title{
+font-family:'Cinzel', serif;
+font-size:34px;
+letter-spacing:2px;
+margin-bottom:20px;
+
+color:#2c2c2c;
+}
+
+.call-btn {
+  padding: 10px 20px;
+  background: #000;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+}
